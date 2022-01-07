@@ -25,6 +25,7 @@
    }
    .jumbotron{
 				margin-top: 10px;
+            margin-bottom: 10px;
 				width: 430px;
 			}
    </style>
@@ -65,31 +66,30 @@
 <body>
 <div class="container reg">
    <div class="row">
-      <div class="col-md-8 col-md-12"> 
+      <div class="col-md-8 col-sm-12"> 
          <form action="" method="POST" class="jumbotron">
-         <h2 style="text-decoration: underline; text-align:center;"><b>Registertion</b></h2>
+         <h2 style="text-decoration: underline; text-align:center;"><b>Registration</b></h2>
             <div class="form-group">
-               <label class="inpt"><b>Full Name :</b></label><br>
-               <input type="text" class="form-control inpt" name="full_name" placeholder="Full Name" required><br>
+               <label class="inpt"><b>Full Name :</b></label>
+               <input type="text" class="form-control inpt" name="full_name" placeholder="Full Name" required>
             </div>
             <div class="form-group">
-               <label class="inpt"><b>E-mail :</b></label><br>
-               <input type="text" class="form-control inpt" name="email" placeholder="Email@example.com" required><br>
+               <label class="inpt"><b>E-mail :</b></label>
+               <input type="text" class="form-control inpt" name="email" placeholder="email@example.com" required>
             </div>
             <div class="form-group">
-               <label class="inpt"><b> Password :</b></label><br>
-               <input type="password" class="form-control inpt" name="password" placeholder="******" required>
+               <label class="inpt"><b> Password :</b></label>
+               <input type="password" class="form-control inpt" name="password" placeholder="********" required>
+            </div>          
+            <div class="form-group inpt">          
+               <button type="submit" name="register" class="btn btn-default ver">Register</button>
             </div>
             <div class="form-group  inpt">
                Haven't Registered ?<a href="login.php"> Login</a>
-            </div>
-            <div class="form-group inpt">          
-               <button type="submit" name="register" class="btn btn-default ver">Register</button><br>
             </div>       
          </form>
       </div>
    </div>
-</div>
-        
+</div>        
 </body>
 </html>

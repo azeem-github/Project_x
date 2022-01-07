@@ -56,7 +56,7 @@
                   <a href="contact.php">Contact</a>
                </div>
                <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="openNav()"><img src="images/toggle-icon.png"></span>
-               <a class="navbar-brand" href="index.html"><img src="images/logo.jpg" style="heigth:100px; width:120px;"></a></a>
+               <a class="navbar-brand" href="index.php"><img src="images/logo.jpg" style="heigth:100px; width:120px;"></a></a>
                <form class="form-inline ">
                   <div class="login_text">
                      <ul>  

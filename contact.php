@@ -34,7 +34,8 @@
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
-      <!-- header section start -->
+      <?php include('includes/header.php');?>
+      <!-- header section start
       <div class="header_section haeder_main">
          <div class="container-fluid">
             <nav class="navbar navbar-light bg-light justify-content-between">
@@ -59,7 +60,7 @@
                </form>
             </nav>
          </div>
-      </div>
+      </div> -->
       <!-- header section end -->
       <!-- contact section start -->
       <div class="contact_section layout_padding">
@@ -78,7 +79,9 @@
       </div>
       <!-- contact section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding margin_top_90">
+
+      <?php include('includes/footer.php');?>
+      <!-- <div class="footer_section layout_padding margin_top_90">
          <div class="container">
             <div class="footer_logo_main">
                <div class="footer_logo"><a href="index.html"><img src="images/footer-logo.png"></a></div>
@@ -131,7 +134,7 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <!-- footer section end -->
       <!-- copyright section start -->
       <div class="copyright_section">

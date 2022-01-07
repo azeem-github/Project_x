@@ -8,10 +8,21 @@ if(!empty($_GET['log'])){
 //Testing(NEW END)
 ?>     
 <!-- banner section start -->
+<?php $sql = mysqli_query($conn, "SELECT * from slider");?>
       <div class="banner_section layout_padding">
          <div id="my_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                <div class="carousel-item active">
+               <?php
+						 $a = 0;
+						 foreach($sql as $row){
+							 $active = '';
+							 if($a == 0){
+								 $active = "active";
+							 }
+						 ?>
+                   <li data-target="#slider-carousel" data-slide-to="<?php echo $a; ?>" class="<?php echo $active; ?>"></li>
+								 <?php $a++; } ?>
                   <div class="container">
                      <div class="row border_1">
                         <div class="col-md-4">
@@ -72,7 +83,7 @@ if(!empty($_GET['log'])){
          </div>
       </div>
       <!-- banner section end -->
-      <!-- catagary section start -->
+      <!-- catagary section start -->      
       <div class="catagary_section layout_padding">
          <div class="container">
             <div class="catagary_main">
@@ -84,9 +95,9 @@ if(!empty($_GET['log'])){
                      <ul>
                         <li><a href="mans_clothes.php">Mens Fashion</a></li>
                         <li><a href="womans_clothes.php">Womans Fashion</a></li>
-                        <!-- <li><a href="#">Beauty</a></li>
+                        <li><a href="#">Beauty</a></li>
                         <li><a href="#">Mobiles</a></li>
-                        <li><a href="#">Computers</a></li> -->
+                        <li><a href="#">Computers</a></li>
                         <li><a href="#">Watches</a></li>
                         <li><a href="#">Kitchen</a></li>
                         <li><a href="#">Sports</a></li>
@@ -96,6 +107,49 @@ if(!empty($_GET['log'])){
             </div>
          </div>
       </div>     
+      <div class="catagary_section_2">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="box_man">
+                     <h3 class="mobile_text">Mobile</h3>
+                     <div class="mobile_img"><img src="images/mobile-img.png"></div>
+                     <div class="cart_main">
+                        <div class="cart_bt"><a href="#">Add To Cart</a></div>
+                        <h4 class="samsung_text">Samsung</h4>
+                        <h6 class="rate_text"><a href="#">$500</a></h6>
+                        <h6 class="rate_text_1">$1000</h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box_man">
+                     <h3 class="mobile_text">Watch</h3>
+                     <div class="watch_img"><img src="images/watch-img.png"></div>
+                     <div class="cart_main">
+                        <div class="cart_bt"><a href="#">Add To Cart</a></div>
+                        <h4 class="samsung_text">Samsung</h4>
+                        <h6 class="rate_text"><a href="#">$500</a></h6>
+                        <h6 class="rate_text_1">$1000</h6>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box_man">
+                     <h3 class="mobile_text">Camera</h3>
+                     <div class="camera_img"><img src="images/camera-img.png"></div>
+                     <div class="cart_main">
+                        <div class="cart_bt"><a href="#">Add To Cart</a></div>
+                        <h4 class="samsung_text">Samsung</h4>
+                        <h6 class="rate_text"><a href="#">$500</a></h6>
+                        <h6 class="rate_text_1">$1000</h6>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- catagary section end -->
       <!-- catagary section end -->
       <!-- computers section start -->
       <div class="computers_section layout_padding">
