@@ -66,7 +66,7 @@
 <body>
 <div class="container reg">
    <div class="row">
-      <div class="col-md-8 col-sm-12"> 
+      <div class="col-md-8 col-sm-12">          
          <form action="" method="POST" class="jumbotron">
          <h2 style="text-decoration: underline; text-align:center;"><b>Registration</b></h2>
             <div class="form-group">

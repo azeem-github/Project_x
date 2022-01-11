@@ -1,4 +1,5 @@
-<?php include('includes/header.php');  if(isset($_SESSION['email']) && $_SESSION['email'] != '') 
+<?php include('includes/header.php');  
+if(isset($_SESSION['admin_email']) && $_SESSION['admin_email'] != '') 
    {
       
    } else

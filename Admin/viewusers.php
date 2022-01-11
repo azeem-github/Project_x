@@ -1,6 +1,12 @@
 <?php include('includes/header.php');
-include('includes/sidebar.php');?>
+if(isset($_SESSION['admin_email']) && $_SESSION['admin_email'] != '') 
+{
 
+} else{
+    header('Location: login.php');
+}
+include('includes/sidebar.php');
+?> 
 <?php
 include('includes/config.php');
  

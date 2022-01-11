@@ -42,7 +42,15 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">    
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-   </head>
+</head>
+   <style>
+.login_text a {
+    color: #171313;
+}
+.login_text a:hover {
+    color: #ff5d68;
+}
+</style>
    <body>
       <!-- header section start -->
       <div class="header_section haeder_main">
@@ -50,13 +58,14 @@
             <nav class="navbar navbar-light bg-light justify-content-between">
                <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="index.php">Home</a>                 
-                  <a href="mans_clothes.php">Mans Clothes</a>
-                  <a href="womans_clothes.php">Womans Clothes</a>
+                  <a href="index.php">Home</a>        
+                  <a href="mans_clothes.php">Electronics</a>         
+                  <a href="mans_clothes.php">Men's Clothing</a>
+                  <a href="womans_clothes.php">Woman's clothing</a>
                   <a href="contact.php">Contact</a>
                </div>
                <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="openNav()"><img src="images/toggle-icon.png"></span>
-               <a class="navbar-brand" href="index.php"><img src="images/logo.jpg" style="heigth:100px; width:120px;"></a></a>
+               <a class="navbar-brand" href="index.php"><img src="images/logo.jpg" style="heigth:100px; width:120px;"></a>
                <form class="form-inline ">
                   <div class="login_text">
                      <ul>  
@@ -73,17 +82,29 @@
                            ?>
                             <li><a href="logout.php?log=1"><img src="images/Capture1.png"></a></li>
                         <?php } ?>
-                        <li><a href="cart.php"><img src="images/Capture2.png"></a></li>
+                        <?php 
+      $count=0;
+      if(isset($_SESSION['cart']))
+      {
+        $count=count($_SESSION['cart']);
+      }
+      ?>
+                        <li><a href="cart.php"><img src="images/Capture2.png">(<?php echo $count; ?>)</a></li>
                         <!-- <li><a href="#"><img src="images/search-icon.png"></a></li> -->
                      </ul>
                   </div>
                </form>             
             </nav>
             <?php
+            if(isset($_SESSION['email'])){
 $emailsession = $_SESSION['email'];
 $email = $_GET['email'];
 ?>
-<h6 style="margin-left:10px; text-align:center;"><!--<i class="ion-email" style="font-size: 1.73em;"></i>--><b> Welcome <?php echo $emailsession; ?> ! :) <b></h6>
+<h6 style="margin-left:10px; text-align:center;"><!--<i class="ion-email" style="font-size: 1.73em;"></i>--><b> Welcome <?php echo $emailsession; ?> ! :) <b></h6> 
+<?php
+            } else{ ?>
+               <h6 style="margin-left:10px; text-align:center;"><!--<i class="ion-email" style="font-size: 1.73em;"></i>--><b>Your Are Not Logged Inn,Please Login First ! :) <b></h6> 
+            <?php } ?>
          </ul>
          </div>
       </div>

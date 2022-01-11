@@ -1,9 +1,10 @@
+<?php session_start();?>
 <?php 
 include('includes/header.php');
 include('includes/sidebar.php'); ?>
 <title>Dashboard</title>
 <?php
-if(isset($_SESSION['email']) && $_SESSION['email'] != '') 
+if(isset($_SESSION['admin_email']) && $_SESSION['admin_email'] != '') 
 {
 
 ?>        
@@ -115,11 +116,11 @@ if(isset($_SESSION['email']) && $_SESSION['email'] != '')
                     <div class="input-group input-group-sm">
                         <input type="text" placeholder="Search.." name="search2">
                         <!-- <input type="text" placeholder="Search.." name="search2"> -->
-                        <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        <!-- <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
                     <div class="input-group-append">           
                     </div>
                     </div>
-                </form>
+                </form> -->
         </div>
       </li>
             </div>

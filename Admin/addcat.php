@@ -51,16 +51,16 @@ if(isset($_POST['upload'])){
                   <div class="form-group">
                      <label style="text-decoration:underline">Category:</label><br>
                      <select class="form-control" name="category">
-                           <option value="Sportswear">Sportswear</option>
-                           <option value="Men">Men</option>
-                           <option value="Women">Women</option>
-                           <option value="kids">kids</option>
-                           <option value="Fashion">Fashion</option>
-                           <option value="Household">Household</option>
-                           <option value="Interiors">Interiors</option>
-                           <option value="Bags">Bags</option>
-                           <option value="Shoes">Shoes</option>
-                           <option value="Clothing">Clothing</option>
+                           <option value="Sportswear">Man's Fashion</option>
+                           <option value="Men">Woman Fashion</option>
+                           <option value="Women">Beauty</option>
+                           <option value="kids">Mobiles</option>
+                           <option value="Fashion">Computers</option>
+                           <option value="Household">Watches</option>
+                           <option value="Interiors">Kitchen</option>
+                           <option value="Sports">Sports</option>
+                           <!-- <option value="Shoes">Shoes</option>
+                           <option value="Clothing">Clothing</option> -->
                         </optgroup>
                      </select>                     
                   </div>           

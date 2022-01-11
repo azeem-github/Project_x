@@ -1,5 +1,5 @@
 <?php include('includes/header.php');
-  if(isset($_SESSION['email']) && $_SESSION['email'] != '') 
+  if(isset($_SESSION['admin_email']) && $_SESSION['admin_email'] != '') 
   {
      
   } else
@@ -52,10 +52,14 @@ if(isset($_POST['upload']))
          <h3>Add Sliders</h3>
          <form action="" method="post" enctype="multipart/form-data">
             <div class="jumbotron">
-               <label> Slider </label>
+               <label> Big Slider </label>
                <input type="file" name="image">
                <br>         
-               <button type="submit" name="upload" class="btn btn-primary">Upload Sliders</button>
+               <button type="submit" name="upload" class="btn btn-primary">Upload Sliders</button><br><br>
+               <!-- <label> Small Slider </label>
+               <input type="file" name="image">
+               <br>         
+               <button type="submit" name="upload" class="btn btn-primary">Upload Sliders</button> -->
             </div>
          </form>
       </div>

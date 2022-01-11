@@ -49,7 +49,8 @@
 					<form action="" method="POST" class="jumbotron">
 									<?php
 							session_start();
-								if(isset($_SESSION['email']))
+								if(isset($_SESSION['admin_email']))
+								// if(isset($_SESSION['email']))
 								{
 									header('Location: dashboard.php');
 								} 
@@ -63,10 +64,10 @@
 
 								if(isset($_POST['submit']))
 								{
-									$email = trim($_POST['email']);
+									$email = trim($_POST['admin_email']);
 									$pass  =  trim($_POST['password']);
 
-									$query1 = "SELECT * FROM admin WHERE email = '$email' and password = '$pass'";
+									$query1 = "SELECT * FROM admin WHERE admin_email = '$email' and password = '$pass'";
 									$check1 = mysqli_query($conn,$query1);
 									$info1 = mysqli_fetch_assoc($check1);
 									$num_row1 = mysqli_num_rows($check1);
@@ -78,7 +79,7 @@
 									else
 									{
 										// start session and show in admin dashboard
-										$_SESSION['email'] = $email;
+										$_SESSION['admin_email'] = $email;
 										echo "<script>alert('Welcome $email')</script>";
 										echo "<script>window.open('dashboard.php','_self')</script>";
 											
@@ -87,7 +88,7 @@
 						?>
 						<h2 style="text-decoration: underline; text-align:center;"><b>Admin Login</b></h2>
 						<div class="form-group">
-							<input type="text" class="form-control inpt" name="email" placeholder="Email Address" required>
+							<input type="text" class="form-control inpt" name="admin_email" placeholder="Email Address" required>
 						</div>
 
 						<div class="form-group">					
